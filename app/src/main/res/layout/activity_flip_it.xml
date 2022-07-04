@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:id="@+id/layout_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/water_progress_view_flip"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/darker_gray"
+        android:visibility="gone">
+
+
+        <Button
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/btnFlipBack"
+            android:text="Flip Back"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_gravity="center"
+        android:id="@+id/water_progress_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        >
+
+        <Button
+            android:id="@+id/btnFlip"
+            android:text="Flip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <FrameLayout
+        android:id="@+id/layoutCube"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom|center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:text="Cube"
+        android:id="@+id/btnCube"
+        android:layout_gravity="top|center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>
+</layout>
