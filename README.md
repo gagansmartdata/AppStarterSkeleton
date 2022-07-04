@@ -1,1 +1,1 @@
-# MediaCard
+# AppStarterSkeleton
