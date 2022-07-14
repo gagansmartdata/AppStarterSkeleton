@@ -2,7 +2,6 @@ package com.sdei.domaindata.data.remote
 
 import com.sdei.base.ApiResponseWrapper
 import com.sdei.domaindata.data.remote.apipayload.SignupPayload
-import com.sdei.domaindata.data.remote.dto.MemeDataDto
 import com.sdei.domaindata.data.remote.dto.UserDataDto
 import retrofit2.http.*
 
@@ -20,8 +19,4 @@ interface ApiInterface {
     @FormUrlEncoded
     @POST("/user/web/v1/forgotPassword")
     suspend fun forgotPassword(@Field("email") email: String): ApiResponseWrapper<UserDataDto>
-
-
-    @GET("/meme/web/v1/meme")
-    suspend fun getMemeList(): ApiResponseWrapper<MemeDataDto>
 }

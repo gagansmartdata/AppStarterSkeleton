@@ -1,9 +1,7 @@
 package com.sdm.mediacard.di
 
 import com.sdei.domaindata.data.remote.ApiInterface
-import com.sdei.domaindata.data.repository.MemeRepositoryImpl
 import com.sdei.domaindata.data.repository.UserRepositoryImpl
-import com.sdei.domaindata.domain.repository.MemeRepository
 import com.sdei.domaindata.domain.repository.UserRepository
 import dagger.Module
 import dagger.Provides
@@ -29,11 +27,4 @@ object RepositoryModule {
     fun provideLoginRepository(api: ApiInterface): UserRepository {
         return UserRepositoryImpl(api)
     }
-
-    @Provides
-    @ViewModelScoped
-    fun provideMemeRepository(api: ApiInterface): MemeRepository {
-        return MemeRepositoryImpl(api)
-    }
-
 }

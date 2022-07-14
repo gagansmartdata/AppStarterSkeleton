@@ -9,8 +9,6 @@ import androidx.datastore.preferences.preferencesDataStoreFile
 import com.sdei.base.common.Constants
 import com.sdei.domaindata.data.local.Preferences
 import com.sdei.domaindata.domain.repository.local.PreferencesHelper
-import com.sdei.domaindata.domain.thirdparty.videoplayer.VideoPlayerHelper
-import com.sdm.mediacard.data.thirdparty.videoplayer.VideoPlayerHelperImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -63,11 +61,5 @@ object AppModule {
             scope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
             produceFile = { appContext.preferencesDataStoreFile(USER_PREFERENCES_NAME) }
         )
-    }
-
-    @Provides
-    @Singleton
-    fun provideExoPlayer(@ApplicationContext appContext: Context): VideoPlayerHelper {
-        return VideoPlayerHelperImpl(appContext)
     }
 }
