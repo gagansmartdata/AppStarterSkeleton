@@ -1,4 +1,4 @@
-package com.sdei.base.common
+package com.sdei.domaindata.common
 
 object Constants {
 

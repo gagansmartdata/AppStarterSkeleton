@@ -1,4 +1,4 @@
-package com.sdei.base.common
+package com.sdei.domaindata.common
 
 /** Created by Gagan on 26/10/21.**/
 
